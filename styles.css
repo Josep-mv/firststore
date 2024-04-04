@@ -16,22 +16,19 @@ html {
 }
 
 header {
-    border: 1px solid red;
-    height: 152px;
+    height: 10rem;
     background-color: #ff3b3c;
 
 }
 section {
-  border: 1px solid purple;
   height: 340px;
 }
 main {
-  border: 1px solid blue;
   height: auto;
 }
 footer {
-  border: 1px solid #009145; /* Hexadecimal color code*/
   min-height: 368px;
+  background-color: #7525A7;
 }
 
 /**header**/
@@ -61,6 +58,14 @@ footer {
   margin: 0;
   padding: 0;
 }
+@media (max-width: 500px) {
+  .nav ul{
+    font-size: 1.2rem;
+  }
+  .columns-container .col ul li a {
+    font-size: 1.2rem;
+  }
+}
 .search .social ul li{
   padding: 0 1rem;
 }
@@ -74,6 +79,7 @@ footer {
   margin: 0;
   padding: 0;
 }
+
 .nav ul li a{
   color: white;
   font-weight: 700;
@@ -93,7 +99,6 @@ footer {
 }
 
 section#hero{
-  border: 1px solid purple;
   height: 34rem;
   background: url("assets/hero_bg.png");
   background-size: cover;
@@ -196,3 +201,38 @@ section#hero .container{
   font-weight: 400;
 }
 
+/** FOOTER **/
+
+footer .container{
+  display: flex;
+  flex-direction: column;
+}
+.columns-container{
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.columns-container .col ul{
+  padding: 0;
+  list-style-type: none;
+}
+.columns-container .col ul li {
+  padding: 5px 0;
+}
+.columns-container .col ul li.col-main-item {
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
+.columns-container .col ul li a {
+  color: white;
+  text-decoration: none;
+}
+.copyright {
+  border-top: 1px solid #ba53fb;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 3rem 0;
+  box-sizing: border-box;
+}
