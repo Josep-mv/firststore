@@ -1,3 +1,4 @@
+/** Globales **/
 html{
     font-size: 62.5%;
     box-sizing: border-box;
@@ -14,7 +15,6 @@ html {
   margin: 0;
   font-family: "Inter", sans-serif;
 }
-
 header {
     height: 10rem;
     background-color: #ff3b3c;
@@ -25,6 +25,7 @@ section {
 }
 main {
   height: auto;
+  padding: 5rem;
 }
 footer {
   min-height: 368px;
@@ -90,17 +91,11 @@ footer {
   text-decoration: underline;
 }
 
-
-.container{
-  width: 100%;
-  margin: 0 auto;
-  height: inherit;
-  min-height: inherit;
-}
+/**Seccion Hero**/
 
 section#hero{
   height: 34rem;
-  background: url("assets/hero_bg.png");
+  background: url("../assets/hero_bg.png");
   background-size: cover;
   background-position: top center;
 }
@@ -122,17 +117,29 @@ section#hero .container{
   line-height: 8rem;
 }
 
+/** MAIN **/
+
+.container{
+  width: 100%;
+  margin: 0 auto;
+  height: inherit;
+  min-height: inherit;
+}
 .product-container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
+.product-container a{
+  text-decoration: none;
+  color: initial;
+}
 
 @media (min-width: 425px) {
-   .search .form input{
+  .search .form input{
     width: 20rem;
-   }
-   .title-container span:first-child{
+  }
+  .title-container span:first-child{
     font-size: 4rem;
   }
   .title-container span:last-child{
@@ -158,7 +165,7 @@ section#hero .container{
   width: 100%;
   height: 25rem;
   object-fit: cover;
-  object-position: center center;
+  object-position: center;
 }
 .product-price-block {
   display: flex;
@@ -181,24 +188,30 @@ section#hero .container{
   background-color: #F0F0F0;
   border-radius: 1.4rem;
   width: auto;
+  overflow: hidden;
 }  
+.product-card:hover{
+  text-decoration: underline;
+}
 .product-info{
   padding: 2rem;
   box-sizing: border-box;
 }
 .product-title{
+  font-size: large;
+  font-weight: bold;
   word-wrap: break-word;
   display: block;
   line-height: 2.2rem;
 }
 .product-description{
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: small;
+  font-weight: normal;
   margin: 0.6rem;
 }
 .product-tax-policy{
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: medium;
+  font-weight: lighter;
 }
 
 /** FOOTER **/
