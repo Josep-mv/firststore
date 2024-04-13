@@ -189,7 +189,7 @@ section#hero .container{
   border-radius: 1.4rem;
   width: auto;
   overflow: hidden;
-}  
+}
 .product-card:hover{
   text-decoration: underline;
 }
@@ -223,8 +223,15 @@ footer .container{
 .columns-container{
   flex: 1;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  footer .columns-container{
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }
 .columns-container .col ul{
   padding: 0;
